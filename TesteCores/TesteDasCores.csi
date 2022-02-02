@@ -1,0 +1,8 @@
+[History]
+1=#P0#=mb	#P1#=MudaCorFundo	#P2#=Project1/FrmTest/MudaCorFundo	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20220202082442	#P7#=0	#P8#=53	.
+2=#P0#=mb	#P1#=MudaCorTexto	#P2#=Project1/FrmTest/MudaCorTexto	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20220131115842	#P7#=0	#P8#=13	.
+3=#P0#=mb	#P1#=Form_Load	#P2#=Project1/FrmTest/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220131115509	#P7#=0	#P8#=-3	.
+4=#P0#=mb	#P1#=cmdFundoAnt_Click	#P2#=Project1/FrmTest/cmdFundoAnt_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220131110856	#P7#=0	#P8#=-3	.
+5=#P0#=mb	#P1#=cmdTextoProx_Click	#P2#=Project1/FrmTest/cmdTextoProx_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220131110830	#P7#=0	#P8#=4	.
+6=#P0#=mb	#P1#=cmdTextoAnt_Click	#P2#=Project1/FrmTest/cmdTextoAnt_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220131110828	#P7#=0	#P8#=-2	.
+7=#P0#=mb	#P1#=cmdFundoProx_Click	#P2#=Project1/FrmTest/cmdFundoProx_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220131102932	#P7#=0	#P8#=1	.
