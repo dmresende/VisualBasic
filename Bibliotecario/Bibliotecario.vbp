@@ -6,6 +6,7 @@ Form=frmAbout.frm
 Module=Biblio; Module1.bas
 Form=frmSplash.frm
 Form=frmCadUsuarios.frm
+Form=frmCadLivros.frm
 IconForm="frmSplash"
 Startup="frmSplash"
 HelpFile=""
@@ -36,3 +37,6 @@ Retained=0
 ThreadPerObject=0
 MaxNumberOfThreads=1
 DebugStartupOption=0
+
+[CodeSMART]
+Task_UID=03_02_22_15_02_01

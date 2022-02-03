@@ -3,12 +3,13 @@ Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "Mscomctl.ocx"
 Begin VB.MDIForm frmBiblio 
    BackColor       =   &H00E0E0E0&
    Caption         =   "Bibliotecário"
-   ClientHeight    =   5400
+   ClientHeight    =   9285
    ClientLeft      =   120
-   ClientTop       =   765
-   ClientWidth     =   7185
+   ClientTop       =   465
+   ClientWidth     =   11745
    Icon            =   "frmBiblio.frx":0000
    LinkTopic       =   "MDIForm1"
+   Picture         =   "frmBiblio.frx":030A
    StartUpPosition =   2  'CenterScreen
    Begin MSComctlLib.Toolbar Toolbar1 
       Align           =   1  'Align Top
@@ -16,8 +17,8 @@ Begin VB.MDIForm frmBiblio
       Left            =   0
       TabIndex        =   0
       Top             =   0
-      Width           =   7185
-      _ExtentX        =   12674
+      Width           =   11745
+      _ExtentX        =   20717
       _ExtentY        =   1164
       ButtonWidth     =   1032
       ButtonHeight    =   1005
@@ -48,10 +49,21 @@ Begin VB.MDIForm frmBiblio
             ImageIndex      =   6
          EndProperty
       EndProperty
+      Begin VB.PictureBox Picture1 
+         Height          =   30
+         Left            =   45
+         Picture         =   "frmBiblio.frx":A813E
+         ScaleHeight     =   30
+         ScaleWidth      =   11385
+         TabIndex        =   1
+         TabStop         =   0   'False
+         Top             =   600
+         Width           =   11385
+      End
    End
    Begin MSComctlLib.ImageList ImageList1 
-      Left            =   45
-      Top             =   870
+      Left            =   10950
+      Top             =   8670
       _ExtentX        =   1005
       _ExtentY        =   1005
       BackColor       =   -2147483643
@@ -62,33 +74,34 @@ Begin VB.MDIForm frmBiblio
       BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
          NumListImages   =   6
          BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmBiblio.frx":030A
+            Picture         =   "frmBiblio.frx":1A1B04
             Key             =   ""
          EndProperty
          BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmBiblio.frx":0624
+            Picture         =   "frmBiblio.frx":1A1E1E
             Key             =   ""
          EndProperty
          BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmBiblio.frx":5E16
+            Picture         =   "frmBiblio.frx":1A7610
             Key             =   ""
          EndProperty
          BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmBiblio.frx":66F0
+            Picture         =   "frmBiblio.frx":1A7EEA
             Key             =   ""
          EndProperty
          BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmBiblio.frx":6A0A
+            Picture         =   "frmBiblio.frx":1A8204
             Key             =   ""
          EndProperty
          BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
-            Picture         =   "frmBiblio.frx":8B44
+            Picture         =   "frmBiblio.frx":1AA33E
             Key             =   ""
          EndProperty
       EndProperty
    End
    Begin VB.Menu mnuCadastro 
       Caption         =   "&Cadastro"
+      Visible         =   0   'False
       Begin VB.Menu mnuCadLivros 
          Caption         =   "&Livros"
       End
@@ -107,6 +120,7 @@ Begin VB.MDIForm frmBiblio
    End
    Begin VB.Menu mnuOperacoes 
       Caption         =   "&Operações"
+      Visible         =   0   'False
       Begin VB.Menu mnuEmprestimos 
          Caption         =   "&Emprestimo de Livros"
       End
@@ -155,6 +169,7 @@ Begin VB.MDIForm frmBiblio
    End
    Begin VB.Menu mnuRelatorios 
       Caption         =   "&Relatórios"
+      Visible         =   0   'False
       Begin VB.Menu mnuRelLivros 
          Caption         =   "&Livros"
          Enabled         =   0   'False
@@ -171,6 +186,7 @@ Begin VB.MDIForm frmBiblio
    End
    Begin VB.Menu mnuHelp 
       Caption         =   "&Ajuda"
+      Visible         =   0   'False
       Begin VB.Menu mnuSobre 
          Caption         =   "&Sobre o Bibliotecário"
       End
@@ -181,6 +197,8 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
+
 'Config sub menu sair
 Private Sub mnuSair_Click()
 Dim vOkas As Integer
@@ -196,11 +214,13 @@ End Sub
 
 Private Sub Toolbar1_ButtonClick(ByVal Button As MSComctlLib.Button)
 
-      If Button.Index = 5 Then  'na apostila não o códigoe stá em o "Then" e sem o "End If" o que dava erro na execução do código, inserindo eles fuinciona normalmente.
-         mnuSair_Click
-     ElseIf Button.Index = 1 Then
+      If Button.Index = 1 Then
+        frmCadLivros.Show
+      ElseIf Button.Index = 2 Then
          frmCadUsuarios.Show
-     End If
+      ElseIf Button.Index = 5 Then  'na apostila não o códigoe stá em o "Then" e sem o "End If" o que dava erro na execução do código, inserindo eles fuinciona normalmente.
+         mnuSair_Click
+    End If
      
 End Sub
 

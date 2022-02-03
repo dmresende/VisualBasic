@@ -2,10 +2,10 @@ VERSION 5.00
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "Mscomctl.ocx"
 Begin VB.Form frmCadUsuarios 
    Caption         =   "Cadastro de Usuários"
-   ClientHeight    =   4560
+   ClientHeight    =   4005
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   7590
+   ClientWidth     =   7305
    BeginProperty Font 
       Name            =   "Tahoma"
       Size            =   8.25
@@ -19,8 +19,8 @@ Begin VB.Form frmCadUsuarios
    KeyPreview      =   -1  'True
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   4560
-   ScaleWidth      =   7590
+   ScaleHeight     =   4005
+   ScaleWidth      =   7305
    ShowInTaskbar   =   0   'False
    Begin VB.TextBox txtCEP 
       Height          =   285
@@ -64,10 +64,10 @@ Begin VB.Form frmCadUsuarios
    End
    Begin VB.TextBox txtNomeUsuario 
       Height          =   285
-      Left            =   1215
+      Left            =   1230
       MaxLength       =   35
       TabIndex        =   2
-      Top             =   1485
+      Top             =   1500
       Width           =   3720
    End
    Begin VB.TextBox txtCodUsuario 
@@ -84,8 +84,8 @@ Begin VB.Form frmCadUsuarios
       Left            =   0
       TabIndex        =   0
       Top             =   0
-      Width           =   7590
-      _ExtentX        =   13388
+      Width           =   7305
+      _ExtentX        =   12885
       _ExtentY        =   1164
       ButtonWidth     =   1032
       ButtonHeight    =   1005
@@ -104,7 +104,6 @@ Begin VB.Form frmCadUsuarios
             ImageIndex      =   2
          EndProperty
          BeginProperty Button3 {66833FEA-8583-11D1-B16A-00C0F0283628} 
-            Enabled         =   0   'False
             Object.ToolTipText     =   "Excluir"
             ImageIndex      =   3
          EndProperty
@@ -115,8 +114,8 @@ Begin VB.Form frmCadUsuarios
       EndProperty
    End
    Begin MSComctlLib.ImageList ImageList1 
-      Left            =   6840
-      Top             =   3405
+      Left            =   4260
+      Top             =   3090
       _ExtentX        =   1005
       _ExtentY        =   1005
       BackColor       =   -2147483643
@@ -308,6 +307,10 @@ Private Sub Form_KeyPress(KeyAscii As Integer)
 
 End Sub
 
+
+'--------------------------------------------------------------------------------
+'FAZER CODIFICAÇÃO DOS BOTÕES
+'--------------------------------------------------------------------------------
 'Por não conseguir uma conexão com o banco de dados tive que comentara parte do exercício que pedia para codificar as instrições de conexão
 'Private Sub txtCodUsuario_LostFocus()
 '
@@ -408,3 +411,38 @@ End Sub
 '            Unload Me
 '        End Select
 'End Sub
+Private Sub Toolbar1_ButtonClick(ByVal Button As MSComctlLib.Button)
+    If Button.Index = 1 Then  'na apostila não o códigoe stá em o "Then" e sem o "End If" o que dava erro na execução do código, inserindo eles fuinciona normalmente.
+        txtCodUsuario.text = Empty
+        txtNomeUsuario.text = Empty
+        txtEndereco.text = Empty
+        txtCidade.text = Empty
+        txtEstado.text = Empty
+        txtCEP.text = Empty
+        txtTelefone.text = Empty
+        MsgBox "Gravação concluída com sucesso.", vbApplicationModal + vbInformation + vbOKOnly, "Gravado"
+    ElseIf Button.Index = 2 Then
+        txtCodUsuario.text = Empty
+        txtNomeUsuario.text = Empty
+        txtEndereco.text = Empty
+        txtCidade.text = Empty
+        txtEstado.text = Empty
+        txtCEP.text = Empty
+        txtTelefone.text = Empty
+        MsgBox "Limpo, com sucesso.", vbApplicationModal + vbInformation + vbOKOnly, "Limpo"
+    ElseIf Button.Index = 3 Then
+        vOk = MsgBox("Confirma a exclusao desse regitro?", vbApplicationModal + vbQuestion + vbYesNo, "Exclusão")
+        txtCodUsuario.text = Empty
+        txtNomeUsuario.text = Empty
+        txtEndereco.text = Empty
+        txtCidade.text = Empty
+        txtEstado.text = Empty
+        txtCEP.text = Empty
+        txtTelefone.text = Empty
+        MsgBox "Excluido com sucesso.", vbApplicationModal + vbInformation + vbOKOnly, "Excluído"
+    ElseIf Button.Index = 4 Then
+        Unload Me
+        frmBiblio.Show
+    End If
+    
+End Sub
