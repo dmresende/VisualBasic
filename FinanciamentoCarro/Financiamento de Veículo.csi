@@ -1,0 +1,11 @@
+[History]
+1=#P0#=mb	#P1#=Prestação	#P2#=Project1/frmCarro/Prestação	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20220202110514	#P7#=0	#P8#=2	.
+2=#P0#=mb	#P1#=cmdCalcular_Click	#P2#=Project1/frmCarro/cmdCalcular_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220202110209	#P7#=0	#P8#=-1	.
+3=#P0#=mb	#P1#=cmdLimpar_Click	#P2#=Project1/frmCarro/cmdLimpar_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220202110153	#P7#=0	#P8#=0	.
+4=#P0#=mb	#P1#=Form_Load	#P2#=Project1/frmCarro/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220202110120	#P7#=0	#P8#=-3	.
+5=#P0#=mb	#P1#=txtEntrada_LostFocus	#P2#=Project1/frmCarro/txtEntrada_LostFocus	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220202110057	#P7#=0	#P8#=-2	.
+6=#P0#=mb	#P1#=txtJuros_LostFocus	#P2#=Project1/frmCarro/txtJuros_LostFocus	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220202110040	#P7#=0	#P8#=10	.
+7=#P0#=mb	#P1#=txtMeses_LostFocus	#P2#=Project1/frmCarro/txtMeses_LostFocus	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220202110029	#P7#=0	#P8#=-1	.
+8=#P0#=mb	#P1#=txtValor_LostFocus	#P2#=Project1/frmCarro/txtValor_LostFocus	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220202105518	#P7#=0	#P8#=-4	.
+9=#P0#=mb	#P1#=Form_KeyPress	#P2#=Project1/frmCarro/Form_KeyPress	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20220201164912	#P7#=0	#P8#=0	.
+10=#P0#=mb	#P1#=Sendkeys	#P2#=Project1/frmCarro/Sendkeys	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20220201142859	#P7#=0	#P8#=1	.
